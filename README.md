@@ -18,13 +18,13 @@ We can use the two additional queries below to provide more insight into the upc
 - Employees eligible for the Mentorship program by department. 
 ```
 SELECT DISTINCT ON (me.emp_no)	
-					me.emp_no,
-					me.first_name,
-					me.last_name,
-					me.birth_date,
-					de.from_date,
-					de.to_date,
-					d.dept_no
+		    me.emp_no,
+		    me.first_name,
+		    me.last_name,
+		    me.birth_date,
+		    de.from_date,
+		    de.to_date,
+	            d.dept_no
 INTO retiring_department
 FROM mentorship_eligibility AS me
 INNER JOIN dept_emp as de
