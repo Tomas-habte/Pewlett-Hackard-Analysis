@@ -25,7 +25,7 @@ SELECT DISTINCT ON (me.emp_no)
 		    de.from_date,
 		    de.to_date,
 	            d.dept_no
-INTO retiring_department
+INTO mentorship_department
 FROM mentorship_eligibility AS me
 INNER JOIN dept_emp as de
 ON (me.emp_no = de.emp_no)
@@ -34,3 +34,24 @@ ON (de.dept_no = d.dept_no)
 WHERE (de.to_date = '9999-01-01')
 AND (birth_date BETWEEN '1965-01-01' AND '1965-12-31')
 ORDER BY emp_no;
+```
+
+- Employees nearing retirement by department. 
+```
+SELECT DISTINCT ON (ut.emp_no)	
+		    ut.emp_no,
+		    ut.first_name,
+		    ut.last_name,
+		    ut.title,
+		    de.from_date,
+		    de.to_date,
+	            d.dept_no
+INTO retirement_department
+FROM unique_titles AS UT
+INNER JOIN dept_emp as de
+ON (ut.emp_no = de.emp_no)
+INNER JOIN departments as d
+ON (de.dept_no = d.dept_no)
+WHERE (de.to_date = '9999-01-01')
+ORDER BY emp_no;
+
