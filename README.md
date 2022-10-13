@@ -46,7 +46,7 @@ SELECT DISTINCT ON (ut.emp_no)
 		    de.from_date,
 		    de.to_date,
 	            d.dept_no
-INTO retirement_department
+INTO retiring_department
 FROM unique_titles AS UT
 INNER JOIN dept_emp as de
 ON (ut.emp_no = de.emp_no)
