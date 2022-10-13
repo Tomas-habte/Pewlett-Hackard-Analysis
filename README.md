@@ -12,5 +12,4 @@ The analysis has revealed the following:
 - According to the mentorship_eligbility table, there are 1,549 employees who are eligible for the Mentorship Program.
 
 ## Summary
-
-
+There are 72,458 employees that are nearing retirement and only 1,549 employees are eligible for the Mentorship Program. Therefore, there are not enough qualified, retirement-ready employees to mentor the next generation of employees as they would each need to have many mentees which is not feasible. 
